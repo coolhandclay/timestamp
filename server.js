@@ -29,7 +29,7 @@ var server = http.createServer(function(req, res) {
    } else {
        
        //2nd attempt
-       date = new Date(parseInt(path)); //try second time as unix
+       date = new Date(parseInt(path)*1000); //try second time as unix and adjust for milliseconds
        if(date.toString() !== "Invalid Date") {
             output = {date: date.toLocaleDateString(), unixtime: date.valueOf()};
        }
