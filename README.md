@@ -10,13 +10,13 @@
                 <ul>4) To return to these instructions don't include a parameter</ul>
             </blockquote>
             <h3>Example usage:</h3>
-            <code>https://timestamp-ms.herokuapp.com/December%2015,%202015</code><br>
-            <code>https://timestamp-ms.herokuapp.com/1450137600</code>
+            <code>https://fcc-timestamp-ms9.herokuapp.com/December%2015,%202015</code><br>
+            <code>https://fcc-timestamp-ms9.herokuapp.com/1450137600</code>
             <h3>Example output:</h3>
             <code>
                 {
-                  "unix": 1450137600,
-                  "natural": "December 15, 2015"
+                  "date": "12/15/15",
+                  "unixtime": "1450137600"
                 }
             </code>
         </div>
