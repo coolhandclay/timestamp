@@ -11,6 +11,7 @@ var server = http.createServer(function(req, res) {
    if(path === '/') {
        fs.readFile('/public/index.html', function(err, content) {
            if(err) {
+               console.log('error');
                console.error(err, 'index.html not found');
            }
            console.log('Serving instructions html!')
