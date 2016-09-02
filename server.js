@@ -10,7 +10,9 @@ var server = http.createServer(function(req, res) {
    
    if(path === '/') {
        fs.readFile('../client/index.html', function(err, content) {
-           if(err) throw err;
+           if(err) {
+               console.error(err, 'index.html not found');
+           }
            res.end(content);
        });
    } else { 
