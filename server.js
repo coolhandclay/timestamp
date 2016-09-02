@@ -9,10 +9,11 @@ var server = http.createServer(function(req, res) {
    var path = url.parse(req.url, true).path; //get the path of the request url
    
    if(path === '/') {
-       fs.readFile('../client/index.html', function(err, content) {
+       fs.readFile('/public/index.html', function(err, content) {
            if(err) {
                console.error(err, 'index.html not found');
            }
+           console.log('Serving instructions html!')
            res.end(content);
        });
    } else { 
