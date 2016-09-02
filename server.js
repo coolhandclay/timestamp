@@ -3,13 +3,12 @@ var url = require('url');
 var fs = require('fs');
 var port = process.env.PORT || 8080;
 
-
 var server = http.createServer(function(req, res) {
    
    var path = url.parse(req.url, true).path; //get the path of the request url
    
    if(path === '/') {
-       fs.readFile('/public/index.html', function(err, content) {
+       fs.readFile('public/index.html', function(err, content) {
            if(err) {
                console.log('error');
                console.error(err, 'index.html not found');
